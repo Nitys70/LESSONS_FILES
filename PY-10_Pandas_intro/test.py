@@ -7,3 +7,5 @@ countries_df = pd.DataFrame({
 })
 
 print(countries_df)
+
+print('Hello world!')
