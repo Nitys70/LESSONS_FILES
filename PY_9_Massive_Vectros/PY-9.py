@@ -33,14 +33,22 @@
 
 
 
-print('*'*30)
+# print('*'*30)
 
-import numpy as np
+# import numpy as np
 
-nd_arr = np.array([
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]   
-    ])
-print(nd_arr.dtype)
+# nd_arr = np.array([
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]   
+#     ])
+# print(nd_arr.dtype)
+
+
+print('hello')
+
+
+
+
+
 
