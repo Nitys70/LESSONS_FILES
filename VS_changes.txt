@@ -1,1 +1,8 @@
 Git: Autorefresh - off
+pip install -U ydata-profiling    HUAWEI
+pip install ipywidgets    HUAWEI
+pip install sweetviz    HUAWEI
+pip install dtale     HUAWEI
+pip install statistics   HUAWEI
+pip install scikit-learn   HUAWEI
+pip install category_encoders   HUAWEI 
