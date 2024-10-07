@@ -6,5 +6,7 @@ pip install dtale     HUAWEI   HP
 pip install statistics   HUAWEI   HP
 pip install scikit-learn   HUAWEI   HP
 pip install category_encoders   HUAWEI   HP
-pip install scipy   HP
-pip install statsmodels   HP
+pip install scipy   HP  HUAWEI
+pip install statsmodels   HP   HUAWEI
+pip install pycountry-convert   HUAWEI
+pip install country_converter   HUAWEI
