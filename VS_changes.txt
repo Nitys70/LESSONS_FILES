@@ -10,3 +10,4 @@ pip install scipy   HP  HUAWEI
 pip install statsmodels   HP   HUAWEI
 pip install pycountry-convert   HUAWEI
 pip install country_converter   HUAWEI
+pip install comet_ml
