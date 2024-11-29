@@ -11,3 +11,5 @@ pip install statsmodels   HP   HUAWEI
 pip install pycountry-convert   HUAWEI  HP
 pip install country_converter   HUAWEI   HP
 pip install comet_ml   HUAWEI HP
+pip install nltk  HUAWEI  
+pip install swifter  HUAWEI  
