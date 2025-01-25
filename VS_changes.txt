@@ -13,3 +13,5 @@ pip install country_converter   HUAWEI   HP
 pip install comet_ml   HUAWEI HP
 pip install nltk  HUAWEI  
 pip install swifter  HUAWEI  
+pip install xlsxwriter   HUAWEI
+pip install auto-py-to-exe  HUAWEI
