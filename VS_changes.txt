@@ -17,3 +17,6 @@ pip install xlsxwriter   HUAWEI
 pip install auto-py-to-exe  HUAWEI
 pip install clustergram   HUAWEI
 pip install imbalanced-learn   HUAWEI
+pip install geopy   HP 
+pip install geopandas  HP
+pip install shapely   HP
