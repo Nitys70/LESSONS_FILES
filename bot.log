@@ -1,0 +1,3 @@
+2025-04-21 03:25:21,838 - __main__ - CRITICAL - Failed to start bot: name 'handle_weather_by_city' is not defined
+2025-04-21 03:25:34,701 - __main__ - CRITICAL - Failed to start bot: name 'handle_weather_by_city' is not defined
+2025-04-21 03:25:39,956 - __main__ - CRITICAL - Failed to start bot: name 'handle_weather_by_city' is not defined
