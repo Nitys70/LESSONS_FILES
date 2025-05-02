@@ -183,7 +183,7 @@ def weather(lat: str, lon: str):
     from io import BytesIO
     
     try:
-        url = f'https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=metric&appid={'1670c80fb594684fb76c8b66c28f7d2b'}&lang=ru'
+        url = f'https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&units=metric&appid={weather_api}&lang=ru'
         response = requests.get(url)
         data = response.json()
 
