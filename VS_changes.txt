@@ -21,4 +21,5 @@ pip install geopy   HP
 pip install geopandas  HP
 pip install shapely   HP
 pip install xgboost  HUAWEI P12
-pip install hyperopt HUAWEI P12
+pip install hyperopt HUAWEI P12  HP P12
+pip install optuna               HP P12
