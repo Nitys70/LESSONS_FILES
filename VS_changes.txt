@@ -24,3 +24,4 @@ pip install xgboost  HUAWEI P12
 pip install hyperopt HUAWEI P12  HP P12
 pip install optuna               HP P12
 pip install TImezoneFinder       HP P12
+pip install yellowbrick          HUAWEI P12
