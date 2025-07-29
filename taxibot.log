@@ -1,0 +1,459 @@
+2025-07-08 19:19:50,816 [WARNING] Обнаружены проблемы с БД, выполняется восстановление...
+2025-07-08 19:19:51,471 [INFO] Бот запущен
+2025-07-08 19:20:08,266 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-08 19:20:13,275 [ERROR] Error while calling `get_updates` one more time to mark all fetched updates as read: %s. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_request` of `Bot`.
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 399, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 669, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4610, in get_updates
+    await self._post(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-07-08 19:20:13,284 [ERROR] Ошибка при запуске бота: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "d:\YaDisk\IDE\to_serv\final_deploy_v2.py", line 1523, in main
+    application.run_polling()
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 837, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1054, in __run
+    loop.run_until_complete(self.start())
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 629, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 547, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 536, in bot
+    raise RuntimeError(
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-07-08 19:20:13,286 [INFO] Бот остановлен
+2025-07-08 19:20:38,112 [WARNING] Обнаружены проблемы с БД, выполняется восстановление...
+2025-07-08 19:20:38,838 [INFO] Бот запущен
+2025-07-08 19:20:49,425 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-08 19:20:54,440 [ERROR] Error while calling `get_updates` one more time to mark all fetched updates as read: %s. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_request` of `Bot`.
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 399, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 669, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4610, in get_updates
+    await self._post(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-07-08 19:20:54,447 [ERROR] Ошибка при запуске бота: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "d:\YaDisk\IDE\to_serv\final_deploy_v2.py", line 1523, in main
+    application.run_polling()
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 837, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1054, in __run
+    loop.run_until_complete(self.start())
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 629, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 547, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 536, in bot
+    raise RuntimeError(
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-07-08 19:20:54,449 [INFO] Бот остановлен
+2025-07-08 19:21:00,947 [WARNING] Обнаружены проблемы с БД, выполняется восстановление...
+2025-07-08 19:21:01,564 [INFO] Бот запущен
+2025-07-08 19:21:12,109 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-08 19:21:17,120 [ERROR] Error while calling `get_updates` one more time to mark all fetched updates as read: %s. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_request` of `Bot`.
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 399, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 669, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4610, in get_updates
+    await self._post(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-07-08 19:21:17,128 [ERROR] Ошибка при запуске бота: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "d:\YaDisk\IDE\to_serv\final_deploy_v2.py", line 1523, in main
+    application.run_polling()
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 837, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1054, in __run
+    loop.run_until_complete(self.start())
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 629, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 547, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 536, in bot
+    raise RuntimeError(
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-07-08 19:21:17,130 [INFO] Бот остановлен
+2025-07-08 19:21:48,981 [WARNING] Обнаружены проблемы с БД, выполняется восстановление...
+2025-07-08 19:21:49,633 [INFO] Бот запущен
+2025-07-08 19:21:55,190 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-08 19:22:00,195 [ERROR] Error while calling `get_updates` one more time to mark all fetched updates as read: %s. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_request` of `Bot`.
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_updater.py", line 399, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 669, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 4610, in get_updates
+    await self._post(
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 697, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 726, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 290, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-07-08 19:22:00,205 [ERROR] Ошибка при запуске бота: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "d:\YaDisk\IDE\to_serv\final_deploy_v2.py", line 1523, in main
+    application.run_polling()
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 837, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1054, in __run
+    loop.run_until_complete(self.start())
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 629, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 547, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "C:\Users\Юрий\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 536, in bot
+    raise RuntimeError(
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-07-08 19:22:00,206 [INFO] Бот остановлен
+2025-07-08 19:22:06,661 [WARNING] Обнаружены проблемы с БД, выполняется восстановление...
+2025-07-08 19:22:07,404 [INFO] Бот запущен
+2025-07-08 19:22:07,950 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getMe "HTTP/1.1 200 OK"
+2025-07-08 19:22:08,069 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-08 19:22:08,070 [INFO] Application started
+2025-07-08 19:22:23,562 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getUpdates "HTTP/1.1 200 OK"
+2025-07-08 19:22:24,173 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/sendMessage "HTTP/1.1 200 OK"
+2025-07-08 19:22:24,384 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/sendMessage "HTTP/1.1 200 OK"
+2025-07-08 19:22:24,628 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/sendMessage "HTTP/1.1 200 OK"
+2025-07-08 19:22:24,852 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/sendMessage "HTTP/1.1 200 OK"
+2025-07-08 19:22:25,048 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/sendMessage "HTTP/1.1 200 OK"
+2025-07-08 19:22:25,269 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/sendMessage "HTTP/1.1 200 OK"
+2025-07-08 19:22:25,483 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/sendMessage "HTTP/1.1 200 OK"
+2025-07-08 19:22:33,668 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getUpdates "HTTP/1.1 200 OK"
+2025-07-08 19:22:43,773 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getUpdates "HTTP/1.1 200 OK"
+2025-07-08 19:22:53,878 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getUpdates "HTTP/1.1 200 OK"
+2025-07-08 19:23:03,983 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getUpdates "HTTP/1.1 200 OK"
+2025-07-08 19:23:14,087 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getUpdates "HTTP/1.1 200 OK"
+2025-07-08 19:23:24,194 [INFO] HTTP Request: POST https://api.telegram.org/bot7693356518:AAGOPzwqc8W38V6w6YEDmJT5ZblLQm2FIws/getUpdates "HTTP/1.1 200 OK"

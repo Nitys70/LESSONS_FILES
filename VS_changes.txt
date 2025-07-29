@@ -25,3 +25,4 @@ pip install hyperopt HUAWEI P12  HP P12
 pip install optuna               HP P12
 pip install TImezoneFinder       HP P12
 pip install yellowbrick          HUAWEI P12
+pip install python-telegram-bot  HP P12  HUAWEI P12
