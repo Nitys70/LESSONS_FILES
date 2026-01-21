@@ -4,6 +4,9 @@ env/
 .env/
 requirements.txt
 /test_of_remote
-
+/sallary
+.sallary/
+.output/
+/output
 
 
